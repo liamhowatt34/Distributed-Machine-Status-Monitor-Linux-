@@ -54,6 +54,7 @@ Start DX (Optional):
 This component injects errors into shared memory to test system robustness.
 
 File Structure:
+```
     project_root/
     │── Common/
     │   ├── bin/                # Contains DR and DX executables
@@ -93,6 +94,7 @@ File Structure:
     │   ├── DX.log              # Log file for DX
     │── makefile                # Root Makefile for building all components
     │── README.md               # Documentation
+```
 
 Message Queue and Shared Memory Details:
 
