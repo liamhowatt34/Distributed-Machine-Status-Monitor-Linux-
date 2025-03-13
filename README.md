@@ -35,20 +35,25 @@ Clone the repository and build the project:
     $ git clone <repository_url>
     $ cd distributed-machine-status-monitor
     $ make
+
 Usage
-Start DR
+
+Start DR:
     $ ./Common/bin/DR
 
 This component creates and manages the message queue and shared memory.
-Start DC
+
+Start DC:
     $ ./DC/bin/DC
 
 Each DC generates machine status messages at randomized intervals and sends them to the queue.
-Start DX (Optional)
+
+Start DX (Optional):
     $ ./Common/bin/DX
 
 This component injects errors into shared memory to test system robustness.
-File Structure
+
+File Structure:
     project_root/
     │── Common/
     │   ├── bin/                # Contains DR and DX executables
@@ -88,8 +93,8 @@ File Structure
     │   ├── DX.log              # Log file for DX
     │── makefile                # Root Makefile for building all components
     │── README.md               # Documentation
-    
-Message Queue and Shared Memory Details
+
+Message Queue and Shared Memory Details:
 
     Message Queue: Used to communicate between DC and DR.
 
@@ -97,7 +102,7 @@ Message Queue and Shared Memory Details
 
     Synchronization: The system ensures proper access and cleanup of message queues and shared memory.
 
-Error Handling & Cleanup
+Error Handling & Cleanup:
 
     Logs errors and status updates in tmp/.
 
